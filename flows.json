@@ -1,0 +1,397 @@
+[
+    {
+        "id": "d6abd08ace4f15b3",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "7eb7b10dd10e3bf0",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "4683a5b2b28265fc",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "8d235295e98e92ed",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "7eb7b10dd10e3bf0",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "77056ea10f0873b8",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "d8780542f650fad3",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "77056ea10f0873b8",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "58d6416d98f085e9",
+        "type": "inject",
+        "z": "d6abd08ace4f15b3",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "alslaalalall",
+        "payloadType": "str",
+        "x": 180,
+        "y": 140,
+        "wires": [
+            [
+                "8b06c098d29deef8"
+            ]
+        ]
+    },
+    {
+        "id": "715c1886390f230a",
+        "type": "debug",
+        "z": "d6abd08ace4f15b3",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 920,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "8b06c098d29deef8",
+        "type": "http request",
+        "z": "d6abd08ace4f15b3",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://api.openweathermap.org/data/2.5/weather?lat=-23.5325&lon=-46.7917&appid=a669c7581a465a7a7c6ca5cea61e378f",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 370,
+        "y": 140,
+        "wires": [
+            [
+                "40d16ac131208c5e"
+            ]
+        ]
+    },
+    {
+        "id": "40d16ac131208c5e",
+        "type": "json",
+        "z": "d6abd08ace4f15b3",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 530,
+        "y": 160,
+        "wires": [
+            [
+                "03cf002cd680898b",
+                "fc401d8de4aa03a5",
+                "edf99e3cbf65aba4"
+            ]
+        ]
+    },
+    {
+        "id": "03cf002cd680898b",
+        "type": "change",
+        "z": "d6abd08ace4f15b3",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.main.temp_min",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 720,
+        "y": 80,
+        "wires": [
+            [
+                "715c1886390f230a",
+                "2b51e5a2921668cc"
+            ]
+        ]
+    },
+    {
+        "id": "fc401d8de4aa03a5",
+        "type": "change",
+        "z": "d6abd08ace4f15b3",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.main.temp_max",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 720,
+        "y": 320,
+        "wires": [
+            [
+                "715c1886390f230a",
+                "d1c631b60029f818"
+            ]
+        ]
+    },
+    {
+        "id": "2b51e5a2921668cc",
+        "type": "ui_gauge",
+        "z": "d6abd08ace4f15b3",
+        "name": "",
+        "group": "8d235295e98e92ed",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temperatura miníma",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "500",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 940,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "d1c631b60029f818",
+        "type": "ui_gauge",
+        "z": "d6abd08ace4f15b3",
+        "name": "",
+        "group": "8d235295e98e92ed",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temperatura maxima",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "500",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 940,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "edf99e3cbf65aba4",
+        "type": "change",
+        "z": "d6abd08ace4f15b3",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.wind.speed",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 660,
+        "y": 360,
+        "wires": [
+            [
+                "715c1886390f230a",
+                "26f19dce853429c1"
+            ]
+        ]
+    },
+    {
+        "id": "26f19dce853429c1",
+        "type": "ui_gauge",
+        "z": "d6abd08ace4f15b3",
+        "name": "",
+        "group": "8d235295e98e92ed",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "vento",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "10",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 890,
+        "y": 380,
+        "wires": []
+    }
+]
